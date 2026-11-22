@@ -4,6 +4,7 @@ function run(p,q){
 const D=new Int32Array(256),C=new Int32Array(64),M=new Int32Array(256),o=[];
 let s=0,c=0,pc=0,n=0,ip=0;
 const T=e=>[o,e];
+// traps: 0 halt, 2 underflow, 3 overflow, 4 div-by-zero, 5 bad opcode, 6 bad address, 7 call overflow, 8 ret empty, 9 pc out of range, 10 step limit, 11 output overflow
 for(;;){
 if(n===1e6)return T(10);
 if(pc<0||pc>=p.length)return T(9);
